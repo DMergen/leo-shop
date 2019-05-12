@@ -23,10 +23,10 @@ nav {
 
 nav .wrapper, header .wrapper {
 	display: flex;
+	justify-content: space-between;
 }
 
 nav .nav-left {
-	width: 100%;
 	display: flex;
 }
 
@@ -50,13 +50,11 @@ nav .nav-left select option {
 }
 
 nav .nav-right {
-	width: 100%;
 	text-align: right;
 }
 
 nav .nav-right ul {
 	display: flex;
-	justify-content: flex-end;
 }
 
 nav .nav-right ul li {
@@ -91,20 +89,18 @@ header {
 
 header .wrapper {
 	min-height: 100px;
-	justify-content: flex-start;
 	align-items: center;
 }
 
 header .icon {
 	min-width: 110px;
-	text-align: left;
 	font: 600 36px "Open Sans Bold", sans-serif;
 }
 
 header .head_nav {
 	display: flex;
 	font-size: 14px;
-	margin-left: 55px;
+	margin-right: 100px;
 }
 
 header .head_nav li {
@@ -127,8 +123,6 @@ header .head_nav a:hover {
 header .search_block {
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
-	width: 47%;
 }
 
 header .search_block input {
@@ -211,10 +205,6 @@ header .search_block .cart {
 	display: flex;
 }
 
-.content .products {
-	width: 760px;
-}
-
 .content .products h2 {
 	margin: 0;
 	margin-bottom: 25px;
@@ -235,7 +225,8 @@ header .search_block .cart {
 }
 
 .content .products .prod:nth-of-type(3n+2) {
-	margin: 0 25px;
+	margin-right: 25px;
+	margin-left: 25px;
 }
 
 .content .products .prod .sale {
@@ -368,12 +359,11 @@ header .search_block .cart {
 
 .information .wrapper {
 	display: flex;
+	justify-content: space-between;
 }
 
 .information .inf_block {
 	display: flex;
-    width: 100%;
-    justify-content: center;
     align-items: center;
 }
 
@@ -398,21 +388,12 @@ footer {
 
 footer .wrapper {
 	display: flex;
-}
-
-footer .foot_block {
-	width: 100%;
-	text-align: left;
-}
-
-footer .foot_block p {
-	margin: 21px 0;
+	justify-content: space-between;
+	align-items: center;
 }
 
 footer .foot_block ul {
 	display: flex;
-    justify-content: flex-end;
-    margin: 21px 0;
 }
 
 footer .foot_block ul li {
@@ -436,4 +417,48 @@ footer .foot_block a {
 
 footer .foot_block a:hover {
 	color: #70a7b5;
+}
+
+@media screen and (max-width: 1024px) {
+	.wrapper {
+		max-width: 900px;
+	}
+
+	nav, header .head_nav {
+		font-size: 16px;
+	}
+
+	header .head_nav {
+		margin-right: 0;
+	}
+
+	header .head_nav li {
+	    margin-right: 15px;
+	}
+
+	header .icon {
+	    font-size: 35px;
+	}
+
+	header .search_block input {
+		height: 35px;
+		font-size: 15px;
+	}
+
+	.content .products .prod, .content .products .prod:nth-of-type(3n+2) {
+		margin-right: 42px;
+		margin-left: 42px;
+	}
+
+	.content .right .news p {
+		font-size: 16px;
+	}
+
+	.information .inf_block p {
+		font-size: 20px;
+	}
+
+	footer {
+		font-size: 17px;
+	}
 }
